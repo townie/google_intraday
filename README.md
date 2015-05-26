@@ -20,7 +20,14 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+data = GoogleIntraday::Client.fetch_6s_ticks("GOOG")
+day = GoogleIntraday::Day.build(data)
+
+day.to_csv
+day.to_hash
+```
+
 
 ## Contributing
 
